@@ -19,7 +19,7 @@ const Hero = () => {
             Abra sua conta em 10 minutos e foque no seu negócio.
           </p>
 
-          <div className="animate-fade-up [animation-delay:400ms] flex flex-col sm:flex-row gap-3 justify-center items-center max-w-lg mx-auto mb-20">
+          <div className="animate-fade-up [animation-delay:400ms] flex flex-col sm:flex-row gap-3 justify-center items-center max-w-lg mx-auto mb-20  ">
             <input
               type="email"
               placeholder="Seu e-mail"
@@ -28,14 +28,14 @@ const Hero = () => {
             <Button
               variant="default"
               size="lg"
-              className="w-full sm:w-auto shadow-xl"
+              className="w-full sm:w-auto shadow-xl hover:shadow-[#171717]/20 transition-shadow"
             >
               Entrar na Lista de Espera
             </Button>
           </div>
 
           <div class="flex items-center justify-center gap-6 mb-20">
-            <button class="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 group">
+            <button class="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 group cursor-pointer  ">
               Ver demonstração
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,10 +56,9 @@ const Hero = () => {
           </div>
 
           <div className="animate-fade-up [animation-delay:600ms] relative mx-auto max-w-5xl">
+            <DashboardPreview />
             <div className="glass rounded-4xl p-3 border border-slate-100 shadow-2xl overflow-hidden">
               <div className="relative rounded-[22px] overflow-hidden bg-white border border-slate-50 shadow-inner">
-                <DashboardPreview />
-
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-white/80 to-transparent pointer-events-none" />
               </div>
             </div>

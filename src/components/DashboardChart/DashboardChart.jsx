@@ -1,6 +1,6 @@
 import React from "react";
 
-const DashboardPreview = () => {
+const DashboardChart = () => {
   return (
     <section className="bg-zinc-50 py-24 px-6 border-y border-zinc-100 overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -124,4 +124,4 @@ const DashboardPreview = () => {
   );
 };
 
-export default DashboardPreview;
+export default DashboardChart;

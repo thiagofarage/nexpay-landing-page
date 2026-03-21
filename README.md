@@ -3,7 +3,7 @@
 A NexPay é uma plataforma de gestão financeira moderna,projetada especialmente para as necesssidades dos Microempreendedores Individuais (MEI). O focodo projeto é unir alta performance técnica com uma interface
 minimalista e intuitiva.
 
-# Visão de Produto e Design
+## Visão de Produto e Design
 
 Inspirado por grandes referências, como Mercury e Ramp, este projeto é um estudo de Design System e UX (User Experience).
 
