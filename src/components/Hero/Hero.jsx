@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import DashboardPreview from "../DashboardPreview/DashboardPreview";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -14,9 +15,10 @@ const Hero = () => {
           </h1>
 
           <p className="animate-fade-up [animation-delay:200ms] text-lg md:text-xl text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Reconciliação automática, cálculo de Burn Rate e automação fiscal.{" "}
-            <br className="hidden md:block" />
-            Abra sua conta em 10 minutos e foque no seu negócio.
+            Visualize caixa, organize despesas e concilie transações em um só
+            lugar.
+            <br className="hidden md:block" />A solução completa para a gestão
+            financeira do seu negócio.
           </p>
 
           <div className="animate-fade-up [animation-delay:400ms] flex flex-col sm:flex-row gap-3 justify-center items-center max-w-lg mx-auto mb-20  ">
@@ -35,7 +37,10 @@ const Hero = () => {
           </div>
 
           <div class="flex items-center justify-center gap-6 mb-20">
-            <button class="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 group cursor-pointer  ">
+            <Link
+              to="/login"
+              class="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 group cursor-pointer  "
+            >
               Ver demonstração
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +57,7 @@ const Hero = () => {
                 <path d="M7 7h10v10"></path>
                 <path d="M7 17 17 7"></path>
               </svg>
-            </button>
+            </Link>
           </div>
 
           <div className="animate-fade-up [animation-delay:600ms] relative mx-auto max-w-5xl">

@@ -1,22 +1,17 @@
-import Hero from "./components/Hero/Hero";
-import Navbar from "./components/Navbar/Navbar";
-import Features from "./components/Features/Features";
-import DashboardChart from "./components/DashboardChart/DashboardChart";
-import FormValidation from "./components/FormValidation/Form";
-import Footer from "./components/Footer/Footer";
-import Button from "./components/Button/Button";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Login from "./pages/Login.jsx";
 
 function App() {
   return (
-    <div className="antialiased bg-white selection:bg-[#C1FF72]">
-      <Navbar />
-      <Hero />
-      <Features />
-      <DashboardChart />
-      <Button />
-      <FormValidation />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        //
+      </Routes>
+    </Router>
   );
 }
 

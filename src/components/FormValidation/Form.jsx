@@ -90,7 +90,7 @@ const FormValidacao = () => {
 
           <div className="space-y-2">
             <label className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest ml-1">
-              Pagaria R$99/mês por isso?
+              Pagaria R$150/mês por isso?
             </label>
             <div className="flex gap-4 pt-2">
               <label className="flex items-center gap-2 cursor-pointer text-sm font-bold">

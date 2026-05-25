@@ -1,6 +1,6 @@
 ## NexPay - Estrutura Financeira
 
-A NexPay é uma plataforma de gestão financeira moderna,projetada especialmente para as necesssidades dos Microempreendedores Individuais (MEI). O focodo projeto é unir alta performance técnica com uma interface
+A NexPay é uma plataforma de gestão financeira moderna,projetada especialmente para as necesssidades dos Microempreendedores Individuais (MEI). O foco do projeto é unir alta performance técnica com uma interface
 minimalista e intuitiva.
 
 ## Visão de Produto e Design
