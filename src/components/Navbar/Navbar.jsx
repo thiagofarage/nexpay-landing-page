@@ -30,13 +30,10 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
-          <button className="hidden sm:block text-sm font-bold text-slate-500 px-4 font-['Space_Grotesk'] cursor-pointer hover:text-[#171717]/80 transition-colors active:scale-95">
-            Entrar
-          </button>
-          <button className="bg-[#171717] text-white px-6 py-2.5 rounded-full text-sm font-bold hover:shadow-lg transition-all active:scale-95 font-['Space_Grotesk'] cursor-pointer">
-            Abrir conta
-          </button>
+        <div className="size- px-5 py-2.5 bg-slate-500 rounded-md inline-flex justify-start items-center">
+          <div className="justify-start text-neutral-950 text-sm font-bold font-['Space_Grotesk']">
+            Get Started
+          </div>
         </div>
       </div>
     </nav>

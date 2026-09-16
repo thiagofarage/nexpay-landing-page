@@ -1,6 +1,6 @@
 import React from "react";
 
-const DashboardPreview = () => {
+const DashboardFrame = () => {
   return (
     <div className="w-full bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden font-['Space_Grotesk']">
       <div className="px-6 py-4 border-b border-slate-50 flex justify-between items-center">
@@ -106,4 +106,4 @@ const DashboardPreview = () => {
   );
 };
 
-export default DashboardPreview;
+export default DashboardFrame;
