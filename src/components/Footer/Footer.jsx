@@ -1,106 +1,89 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowUp, ArrowUpRight } from "lucide-react";
+import Logo from "../Logo/Logo";
 
-const Footer = () => {
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-white border-t border-slate-100 pt-24 pb-12 font-['Space_Grotesk']">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-2 md:col-span-1">
-            <a href="/" className="flex items-center gap-2.5 mb-6">
-              <div className="w-8 h-8 bg-[#171717] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">N</span>
-              </div>
-              <span className="text-xl font-extrabold text-[#171717] tracking-[-0.03em]">
-                NexPay
-              </span>
+    <footer className="site-footer" id="rodape">
+      <div className="footer-inner">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <a
+              href="#inicio"
+              aria-label="NexPay — voltar ao início"
+              className="brand-link"
+            >
+              <Logo variant="white" />
             </a>
-            <p className="text-sm text-slate-500 leading-relaxed max-w-50">
-              A infraestrutura financeira que você precisa.
+            <p>
+              Gestão financeira para negócios que querem avançar com mais
+              clareza.
             </p>
+            <span>Contas claras. Decisões melhores.</span>
           </div>
 
-          <div>
-            <h4 className="text-sm font-bold text-[#171717] mb-6">
-              Plataforma
-            </h4>
-            <ul className="space-y-4 text-sm text-slate-500">
+          <nav className="footer-nav" aria-label="Produtos no rodapé">
+            <h2>Produtos</h2>
+            <ul>
               <li>
-                <a href="#" className="hover:text-[#171717] transition-colors">
-                  Funcionalidades
-                </a>
+                <a href="#produto-cartoes">Cartão corporativo</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#171717] transition-colors">
-                  Segurança
-                </a>
+                <a href="#produto-despesas">Gestão de despesas</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#171717] transition-colors">
-                  API
-                </a>
+                <a href="#produto-fluxo-de-caixa">Fluxo de caixa</a>
               </li>
             </ul>
-          </div>
+          </nav>
 
-          <div>
-            <h4 className="text-sm font-bold text-[#171717] mb-6">Empresa</h4>
-            <ul className="space-y-4 text-sm text-slate-500">
+          <nav className="footer-nav" aria-label="Navegação no rodapé">
+            <h2>Navegação</h2>
+            <ul>
               <li>
-                <a href="#" className="hover:text-[#171717] transition-colors">
-                  Sobre
-                </a>
+                <a href="#solucoes">Soluções</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#171717] transition-colors">
-                  Blog
-                </a>
+                <a href="#empresa">Empresa</a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#171717] transition-colors">
-                  Carreiras
-                </a>
+                <a href="#visao-geral">A plataforma</a>
+              </li>
+              <li>
+                <a href="#cartao-corporativo">NexPay Business</a>
               </li>
             </ul>
-          </div>
+          </nav>
 
-          <div>
-            <h4 className="text-sm font-bold text-[#171717] mb-6">Suporte</h4>
-            <ul className="space-y-4 text-sm text-slate-500">
+          <nav className="footer-nav" aria-label="Sua conta no rodapé">
+            <h2>Sua conta</h2>
+            <ul>
               <li>
-                <a href="#" className="hover:text-[#171717] transition-colors">
-                  Ajuda
-                </a>
+                <Link to="/login">
+                  Acessar conta
+                  <ArrowUpRight size={13} aria-hidden="true" />
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#171717] transition-colors">
-                  Contato
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#171717] transition-colors">
-                  Status
-                </a>
+                <Link to="/dashboard">
+                  Meu painel
+                  <ArrowUpRight size={13} aria-hidden="true" />
+                </Link>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
 
-        <div className="pt-8 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[12px] text-slate-400 font-medium">
-            © 2026 NexPay Financial Technologies.
-          </p>
-          <div className="flex gap-6 text-[12px] font-medium text-slate-400">
-            <a href="#" className="hover:text-[#171717]">
-              Privacidade
-            </a>
-            <a href="#" className="hover:text-[#171717]">
-              Termos
-            </a>
-          </div>
+        <div className="footer-legal">
+          <p>© {currentYear} Nexpay</p>
+          <a href="#inicio" className="footer-back-to-top">
+            Voltar ao topo
+            <ArrowUp size={14} aria-hidden="true" />
+          </a>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -1,0 +1,5 @@
+import logo from "../../assets/logo/nexpay-logo.svg";
+
+export default function Logo() {
+  return <img src={logo} alt="NexPay Logo" className="h-8 w-auto" />;
+}

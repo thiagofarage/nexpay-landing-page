@@ -1,4 +1,4 @@
-import React from "react";
+import CorporateCard from "../CorporateCard/CorporateCard";
 
 const DashboardFrame = () => {
   return (
@@ -12,9 +12,9 @@ const DashboardFrame = () => {
         <div className="h-4 w-32 bg-slate-50 rounded-full" />
       </div>
 
-      <div className="p-8">
+      <div className="p-5 sm:p-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          <div className="col-span-2 p-6 rounded-2xl bg-[#FAFAFA] border border-slate-100">
+          <div className="md:col-span-2 p-6 rounded-2xl bg-[#FAFAFA] border border-slate-100">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
               Saldo Total
             </span>
@@ -36,20 +36,7 @@ const DashboardFrame = () => {
             </div>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#171717] text-white flex flex-col justify-between">
-            <div className="flex justify-between items-start">
-              <div className="w-10 h-6 bg-white/20 rounded-md" />
-              <span className="text-[10px] font-bold opacity-50 uppercase">
-                NexPay Platinum
-              </span>
-            </div>
-            <div>
-              <span className="text-sm font-medium tracking-widest">
-                •••• 8829
-              </span>
-              <p className="text-[10px] opacity-50 mt-1">THIAGO OLIVEIRA</p>
-            </div>
-          </div>
+          <div className="overview-card"><CorporateCard compact /></div>
         </div>
 
         <div>

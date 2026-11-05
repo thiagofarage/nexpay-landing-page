@@ -1,23 +1,47 @@
-## NexPay - Estrutura Financeira
+# NexPay — Front-end
 
-A NexPay é uma plataforma de gestão financeira moderna,projetada especialmente para as necesssidades dos Microempreendedores Individuais (MEI). O foco do projeto é unir alta performance técnica com uma interface
-minimalista e intuitiva.
+Aplicação de gestão financeira para portfólio, com React, JavaScript, Vite, Tailwind CSS e React Router. Front-end e API permanecem em projetos independentes no mesmo workspace.
 
-## Visão de Produto e Design
+## Executar
 
-Inspirado por grandes referências, como Mercury e Ramp, este projeto é um estudo de Design System e UX (User Experience).
+Use Node.js 22.12 ou superior e npm. Neste diretório:
 
-## Tecnologias Utilizadas
+```powershell
+npm ci
+npm run dev
+```
 
-- React.js: Para a construção de interfaces.
-- Tailwind CSS: Estilização baseada em tokens de design para consistência visual.
-- Lucide React: Iconografia moderna e leve.
-- Design System: Definição de paleta de cores e arredondamentos para um ar mais premium.
+Abra http://localhost:5173. A porta é fixa para corresponder à origem autorizada pela API. Execute nexpay-api em outro terminal na porta 3000, seguindo o README do backend. Não há variáveis de ambiente obrigatórias no front-end.
 
-## Desafios Aprendidos
+O navegador usa /api, encaminhado pelo proxy do Vite para o backend. Login, sessão e logout dependem da API e do PostgreSQL em execução. Usuários existentes precisam de hash bcrypt válido. O seed opcional da API documenta uma conta fictícia para bancos novos; nenhum usuário é criado automaticamente pelo front-end.
 
-Este projeto representou um marco na minha evolução de desenvolvedor.
+```powershell
+npm run lint
+npm run build
+npm run preview
+```
 
-- Engenharia de Design: Extração e implementação de tokens de design de ferramentas (como a Lovable).
-- Resiliência.
-- Foco no Usuário (PJ): Validação de hipóteses de MVP focado em dores reais de profissionais que buscam automação fiscal.
+Preview usa a mesma porta 5173: pare o servidor de desenvolvimento antes. Para publicação, configure HTTPS e o encaminhamento de /api para o backend no servidor de hospedagem; o build não inclui o servidor Vite.
+
+## Rotas
+
+- /: landing page e demonstração visual estática.
+- /login: formulário integrado, carregamento e mensagens de erro.
+- /dashboard: exige sessão e mostra o usuário autenticado e suas contas, com logout.
+
+A sessão dura uma hora. O token fica em cookie HttpOnly, nunca em localStorage. Cadastro, recuperação de senha e Remember me continuam pendentes; Esses controles não são exibidos enquanto não estiverem implementados.
+
+## Documentação
+
+- [Arquitetura](docs/architecture.md)
+- [Roadmap](docs/roadmap.md)
+- [Marca](docs/brand-guide.md)
+- [Referência visual](docs/design-system.md)
+- [Rascunhos preservados](docs/archive/README.md)
+
+A identidade visual usa o símbolo reconstruído da referência Black, com inversão branca em fundos escuros, tipografia Space Grotesk local e geometria própria no fundo. Login e Home são responsivos; o Dashboard mantém as contas reais da API. As versões anteriores foram preservadas em docs/archive/before-visual-refresh.
+
+## Marca e revisão visual
+
+- [SVGs importáveis no Figma](design/figma/README.md)
+- [Decisões e validação visual](docs/visual-review.md)
